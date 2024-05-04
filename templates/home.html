@@ -10,11 +10,15 @@
   <body>
     <div class="container">
     <h1 class="text-center mt-2 mb-4">Alua Careers</h1>
-    <img class="img-fluid" src="https://alua-careers-website.aluabarbara.repl.co/static/banner.jpg" height=320> 
+    <img class="img-fluid" src="static/banner.jpg" height=320> 
     <h2 class="text-center">About Alua</h2>
     <p class="lead">With six children in tow, Catherine raced to the airport departing gate. This wasn't an easy task as the children had other priorities than to get to the gate. She knew that she was tight on time and the frustration came out as she yelled at the kids to keep up. They continued to test her, pretending not to listen and to move in directions that only slowed them down. They had no idea the wrath they were about to receive when Catherine made it to the gate only to be informed that they had all missed the plane.</p>
     <h2 class="text-center mt-2 mb-4"> Open Positions</h2>
-    <p class = "bodytext">TO-DO: Show open positions</p>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobitems.html' %}
+      {% endfor %}
+    </div>
     <div style="text-align:center;">
       <button class="btn btn-primary btn-lg">Contact Us</button>
       <p class="my-4"> Copyright 2024, Alua</p>
